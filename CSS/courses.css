@@ -1,0 +1,107 @@
+/* Start Global Rules */
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+/* End Main Components */
+
+/* Start Courses Content */
+.page .content .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .page .content .courses {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+.page .content .courses .box-details {
+    position: relative;
+}
+
+.page .content .courses .box-details > img {
+    width: 64px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.page .content .courses .box-details .image img {
+    max-width: 100%;
+}
+
+.page .content .courses .box-details .txt {
+    padding: 20px;
+    position: relative;
+    min-height: 170px;
+}
+
+.page .content .courses .box-details .txt h4 {
+    margin-bottom: 20px;
+}
+
+.page .content .courses .box-details .txt p {
+    color: var(--grey-color);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.page .content .courses .box-details .txt span {
+    display: block;
+    padding: 4px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    color: white;
+    background-color: var(--blue-color);
+    width: fit-content;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+.page .content .courses .box-details .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.page .content .courses .box-details .info span {
+    font-size: 13px;
+    color: var(--grey-color);
+    display: block;
+    position: relative;
+}
+
+.page .content .courses .box-details .info span:first-of-type {
+    margin-left: 20px;
+}
+
+.page .content .courses .box-details .info span:first-of-type:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
+    position: absolute;
+    left: -18px;
+}
+
+.page .content .courses .box-details .info span:last-of-type:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\24";
+    font-weight: 900;
+    position: absolute;
+    left: -14px;
+}
+/* End Courses Content */

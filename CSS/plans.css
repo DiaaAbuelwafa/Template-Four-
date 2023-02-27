@@ -1,0 +1,140 @@
+/* Start Global Rules */
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+/* End Main Components */
+
+/* Start Plans Content */
+.page .content .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .page .content .plans {
+        grid-template-columns: 1fr;
+    }
+}
+
+.page .content .plans .box-details {
+    border-radius: 0;
+    padding: 20px;
+}
+
+.page .content .plans .box-details .price {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border: 3px solid white;
+}
+
+.page .content .plans .box-details:first-of-type .price {
+    background-color: var(--green-color);
+    outline: 4px solid var(--green-color);
+}
+
+.page .content .plans .box-details:nth-of-type(2) .price {
+    background-color: var(--blue-color);
+    outline: 4px solid var(--blue-color);
+}
+
+.page .content .plans .box-details:last-of-type .price {
+    background-color: var(--orange-color);
+    outline: 4px solid var(--orange-color);
+}
+
+.page .content .plans .box-details .price span {
+    display: block;
+}
+
+.page .content .plans .box-details .price span:first-of-type {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.page .content .plans .box-details .price span:last-of-type {
+    font-size: 40px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.page .content .plans .box-details .price span:last-of-type::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\0024";
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    top: 0px;
+    left: -20px;
+}
+
+.page .content .plans .box-details ul {
+    margin-top: 20px;
+}
+
+.page .content .plans .box-details ul li {
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    position: relative;
+    font-size: 15px;
+}
+
+.page .content .plans .box-details ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--green-color);
+    position: absolute;
+    left: 0px;
+}
+
+.page .content .plans .box-details:first-of-type ul li:nth-of-type(4)::before,
+.page .content .plans .box-details:first-of-type ul li:nth-of-type(5)::before,
+.page .content .plans .box-details:first-of-type ul li:nth-of-type(6)::before,
+.page .content .plans .box-details:first-of-type ul li:nth-of-type(7)::before,
+.page .content .plans .box-details:first-of-type ul li:nth-of-type(8)::before,
+.page .content .plans .box-details:first-of-type ul li:nth-of-type(9)::before,
+.page .content .plans .box-details:nth-of-type(2) ul li:nth-of-type(8)::before,
+.page .content .plans .box-details:nth-of-type(2) ul li:nth-of-type(9)::before {
+    content: "\f00d";
+    color: var(--red-color);
+}
+
+.page .content .plans .box-details ul li i {
+    color: var(--grey-color);
+}
+
+.page .content .plans .box-details > a {
+    display: block;
+    margin-top: 17px;
+    padding: 6px 10px;
+    background-color: var(--green-color);
+    color: white;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.page .content .plans .box-details:nth-of-type(2) > a {
+    background-color: var(--blue-color);
+}
+
+.page .content .plans .box-details:last-of-type > span {
+    display: block;
+    color: var(--grey-color);
+    margin-top: 19px;
+    text-align: center;
+}
+/* End Plans Content */

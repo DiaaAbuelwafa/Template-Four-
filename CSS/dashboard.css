@@ -1,0 +1,897 @@
+/* Start Global Rules */
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+/* End Global Rules */
+
+/* Start Dashboard Content */
+
+.page .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.page .content .dash {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .page .content {
+        padding: 10px;
+    }
+    .page .content .dash {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    } 
+}
+
+.page .content .dash .dash-1 .box-title {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    min-height: 140px;
+    padding: 20px;
+    position: relative;
+}
+
+.page .content .dash .dash-1 .box-title::before {
+    content: "";
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 4px solid white;
+    background-color: white;
+    background-image: url(../Images/avatar.png);
+    background-size: cover;
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+@media (max-width: 767px) {
+    .page .content .dash .dash-1 .box-title::before {
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+
+.page .content .dash .dash-1 .box-title .image img {
+    width: 200px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .page .content .dash .dash-1 .box-title .image {
+        display: none;
+    } 
+}
+
+.page .content .dash .dash-1 .details {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.page .content .dash .dash-1 .details div {
+    flex-basis: 30%;
+}
+
+@media (max-width: 767px) {
+    .page .content .dash .dash-1 .details {
+        flex-direction: column;
+    }
+    .page .content .dash .dash-1 .details div {
+        margin-bottom: 20px;
+    } 
+}
+
+.page .content .dash .dash-1 .details div span {
+    display: block;
+    text-align: center;
+}
+
+.page .content .dash .dash-1 .details div span:last-of-type {
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--grey-color);
+}
+
+.page .content .dash .dash-2 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-2 form {
+    margin-top: 20px;
+}
+.page .content .dash .dash-2 form input[type="text"],
+.page .content .dash .dash-2 form textarea {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #eee;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.page .content .dash .dash-2 form input[type="text"] {
+    margin-bottom: 20px;
+}
+
+.page .content .dash .dash-2 form textarea {
+    resize: none;
+    min-height: 180px;
+}
+
+.page .content .dash .dash-3 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-3 .box-title {
+    padding: 0;
+}
+
+.page .content .dash .dash-3 .details {
+    margin-top: 20px;
+}
+
+.page .content .dash .dash-3 .details .details-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.page .content .dash .dash-3 .details .details-box div:first-of-type {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin-right: 20px;
+}
+
+.page .content .dash .dash-3 .details .first div:first-of-type {
+    background-color: rgb(0 117 255 / 20%);
+    color: var(--blue-color);
+}
+.page .content .dash .dash-3 .details .second div:first-of-type {
+    background-color: rgb(245 158 11 / 20%);
+    color: var(--orange-color);
+}
+.page .content .dash .dash-3 .details .third div:first-of-type {
+    background-color: rgb(34 197 94 / 20%);
+    color: var(--green-color);
+}
+
+.page .content .dash .dash-3 .details .details-box div:last-of-type {
+    flex: 1;
+}
+
+.page .content .dash .dash-3 .details .details-box div:last-of-type > span {
+    display: block;
+}
+
+.page .content .dash .dash-3 .details .details-box div:last-of-type span:first-of-type {
+    color: var(--grey-color);
+    margin-bottom: 10px;
+}
+
+.page .content .dash .dash-3 .details .details-box div:last-of-type span:nth-of-type(2) {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.page .content .dash .dash-3 .details .details-box div:last-of-type .limit {
+    width: 100%;
+    height: 4px;
+    display: block;
+}
+
+.page .content .dash .dash-3 .details .first div:last-of-type .limit {
+    background-color: rgb(0 117 255 / 20%);
+}
+.page .content .dash .dash-3 .details .second div:last-of-type .limit {
+    background-color: rgb(245 158 11 / 20%);
+}
+.page .content .dash .dash-3 .details .third div:last-of-type .limit {
+    background-color: rgb(34 197 94 / 20%);
+}
+
+.page .content .dash .dash-3 .details .details-box div:last-of-type .limit > span {
+    display: block;
+    height: 100%;
+    position: relative;
+}
+
+.page .content .dash .dash-3 .details .details-box div:last-of-type .limit > span span {
+    color: white;
+    padding: 2px 5px;
+    border-radius: 6px;
+    font-size: 13px;
+    position: absolute;
+    right: -18px;
+    top: -32px;
+}
+
+.page .content .dash .dash-3 .details .first div:last-of-type .limit > span,
+.page .content .dash .dash-3 .details .first div:last-of-type .limit > span span {
+    background-color: var(--blue-color);
+}
+.page .content .dash .dash-3 .details .second div:last-of-type .limit > span,
+.page .content .dash .dash-3 .details .second div:last-of-type .limit > span span {
+    background-color: var(--orange-color);
+}
+.page .content .dash .dash-3 .details .third div:last-of-type .limit > span,
+.page .content .dash .dash-3 .details .third div:last-of-type .limit > span span {
+    background-color: var(--green-color);
+}
+
+.page .content .dash .dash-3 .details .details-box div:last-of-type .limit > span span::before {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 7px;
+    border-style: solid;
+}
+
+.page .content .dash .dash-3 .details .first div:last-of-type .limit > span span::before {
+    border-color: var(--blue-color) transparent transparent transparent;
+}
+.page .content .dash .dash-3 .details .second div:last-of-type .limit > span span::before {
+    border-color: var(--orange-color) transparent transparent transparent;
+}
+.page .content .dash .dash-3 .details .third div:last-of-type .limit > span span::before {
+    border-color: var(--green-color) transparent transparent transparent;
+}
+
+.page .content .dash .dash-4 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-4 .details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media(max-width: 767px) {
+    .page .content .dash .dash-4 .details {
+        grid-template-columns: 1fr;
+    }
+}
+
+.page .content .dash .dash-4 .details div {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.page .content .dash .dash-4 .details div:first-of-type i {
+    color: var(--orange-color);
+}
+
+.page .content .dash .dash-4 .details div:nth-of-type(2) i {
+    color: var(--blue-color);
+}
+.page .content .dash .dash-4 .details div:nth-of-type(3) i {
+    color: var(--green-color);
+}
+.page .content .dash .dash-4 .details div:last-of-type i {
+    color: var(--red-color);
+}
+
+.page .content .dash .dash-4 .details span {
+    display: block;
+}
+
+.page .content .dash .dash-4 .details span:first-of-type {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.page .content .dash .dash-4 .details span:last-of-type {
+    color: var(--grey-color);
+    font-size: 13px;
+}
+
+.page .content .dash .dash-5 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-5 .box-title {
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-5 .box-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.page .content .dash .dash-5 .box-details:first-of-type {
+    border: none;
+    padding-top: 0;
+}
+
+.page .content .dash .dash-5 .box-details:last-of-type {
+    padding-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .page .content .dash .dash-5 .box-details {
+        flex-direction: column;
+    }
+}
+
+.page .content .dash .dash-5 .box-details .info {
+    display: flex;
+}
+
+.page .content .dash .dash-5 .box-details .info img {
+    width: 100px;
+    border-radius: 6px;
+    max-width: 100%;
+    margin-right: 15px;
+}
+
+@media (max-width: 767px) {
+    .page .content .dash .dash-5 .box-details .info {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .page .content .dash .dash-5 .box-details .info img {
+        margin: 0 auto 10px auto;
+    }
+}   
+
+.page .content .dash .dash-5 .box-details .info h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.page .content .dash .dash-5 .box-details .info p {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.page .content .dash .dash-5 .box-details .time {
+    padding: 2px 10px;
+    background-color: #eee;
+    border-radius: 6px;
+}
+.page .content .dash .dash-5 .box-details .time span {
+    font-size: 13px;
+}
+
+.page .content .dash .dash-6 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-6 .box-title {
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-6 .box-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-6 .different {
+    border: none;
+    padding-top: 0;
+}
+
+.page .content .dash .dash-6 .box-details:last-of-type {
+    padding-bottom: 0;
+}
+
+.page .content .dash .dash-6 .box-details .txt h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.page .content .dash .dash-6 .box-details .txt p {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+.page .content .dash .dash-6 .box-details:nth-of-type(4) {
+    background-color: white;
+    opacity: 30%;
+}
+
+.page .content .dash .dash-6 .box-details:nth-of-type(4) .txt {
+    text-decoration: line-through;
+}
+
+.page .content .dash .dash-6 .box-details i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.page .content .dash .dash-6 .box-details i:hover {
+    color: var(--red-color);
+}
+
+.page .content .dash .dash-7 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-7 .box-title {
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-7 .box-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.page .content .dash .dash-7 .different {
+    padding-top: 0;
+    color: var(--grey-color);
+    background-color: transparent;
+}
+
+.page .content .dash .dash-7 .box-details:last-of-type {
+    padding-bottom: 0;
+}
+
+.page .content .dash .dash-7 .box-details:not(.different) span:last-of-type {
+    background-color: #eee;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.page .content .dash .dash-8 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-8 .box-title {
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-8 .details-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee;
+}
+
+.page .content .dash .dash-8 .different {
+    padding-top: 0;
+    border: none;
+}
+
+.page .content .dash .dash-8 .details-box:last-of-type {
+    padding-bottom: 0;
+}
+.page .content .dash .dash-8 .details-box .info {
+    display: flex;
+}
+
+.page .content .dash .dash-8 .details-box .info img {
+    width: 40px;
+    height: 40px;
+    max-width: 100%;
+    margin-right: 15px;
+}
+
+.page .content .dash .dash-8 .details-box span {
+    display: block;
+}
+
+.page .content .dash .dash-8 .details-box .info .txt span:last-of-type {
+    color: var(--grey-color);
+    margin-top: 10px;
+}
+
+.page .content .dash .dash-8 .details-box .size {
+    background-color: #eee;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.page .content .dash .dash-8 .details-box .size span {
+    font-size: 13px;
+}
+
+.page .content .dash .dash-9 {
+    padding: 20px;
+    position: relative;
+}
+
+.page .content .dash .dash-9 .box-title {
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-9 .details {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.page .content .dash .dash-9 .details::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: var(--blue-color);
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+
+.page .content .dash .dash-9 .details P {
+    margin-left: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.page .content .dash .dash-9 .details P::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--blue-color);
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+    position: absolute;
+    left: -40px;
+    top: 0;
+}
+
+.page .content .dash .dash-9 .details P:last-of-type::before {
+    background-color: white; 
+}
+
+.page .content .dash .dash-9 .details P:nth-of-type(4)::before {
+    animation: disappear 0.8s alternate infinite;
+}
+
+@keyframes disappear {
+    0% {
+        background-color: var(--blue-color); 
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+.page .content .dash .dash-9 img {
+    width: 160px;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}
+
+.page .content .dash .dash-10 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-10 .box-title {
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-10 .details .txt {
+    margin-bottom: 20px;
+    margin-left: 50px;
+    position: relative;
+}
+
+.page .content .dash .dash-10 .details .txt::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: -22px;
+}
+
+.page .content .dash .dash-10 .details .txt::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -50px;
+}
+
+.page .content .dash .dash-10 .details .txt:first-of-type::before,
+.page .content .dash .dash-10 .details .txt:first-of-type::after {
+    background-color: var(--blue-color);
+}
+
+.page .content .dash .dash-10 .details .txt:nth-of-type(2)::before,
+.page .content .dash .dash-10 .details .txt:nth-of-type(2)::after {
+    background-color: var(--green-color);
+}
+.page .content .dash .dash-10 .details .txt:nth-of-type(3)::before,
+.page .content .dash .dash-10 .details .txt:nth-of-type(3)::after {
+    background-color: var(--orange-color);
+}
+.page .content .dash .dash-10 .details .txt:last-of-type::before,
+.page .content .dash .dash-10 .details .txt:last-of-type::after {
+    background-color: var(--red-color);
+}
+
+.page .content .dash .dash-10 .details .txt p:first-of-type {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.page .content .dash .dash-10 .details .txt p:last-of-type {
+    color: var(--grey-color);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.page .content .dash .dash-11 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-11 .box-title {
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-11 .info {
+    display: flex;
+}
+
+.page .content .dash .dash-11 .info {
+    margin-bottom: 20px;
+}
+
+.page .content .dash .dash-11 .info img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.page .content .dash .dash-11 .info .txt span:first-of-type {
+    display: block;
+    font-weight: bold;
+}
+
+.page .content .dash .dash-11 .info .txt span:last-of-type {
+    display: block;
+    color: var(--grey-color);
+    margin-top: 5px;
+}
+
+.page .content .dash .dash-11 .about {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.page .content .dash .dash-11 .about p {
+    line-height: 2;
+}
+
+.page .content .dash .dash-11 .score {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.page .content .dash .dash-11 .score div {
+    display: flex;
+    align-items: center;
+    color: var(--grey-color);
+}
+.page .content .dash .dash-11 .score div i {
+    margin-right: 5px;
+}
+
+.page .content .dash .dash-12 {
+    padding: 20px;
+}
+
+.page .content .dash .dash-12 .box-title {
+    padding-bottom: 20px;
+}
+
+.page .content .dash .dash-12 .box-title h2 {
+    margin-bottom: 0;
+}
+
+.page .content .dash .dash-12 .details-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+.page .content .dash .dash-12 .details-box .info {
+    display: flex;
+    align-items: center;
+}
+
+.page .content .dash .dash-12 .details-box .info  i {
+    margin-right: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    transition: 0.3s;
+}
+
+.page .content .dash .dash-12 .details-box .click a {
+    padding: 4px 10px;
+    color: white;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.page .content .dash .dash-12 .details-box .info  i:hover {
+    transform: rotate(5deg);
+}
+
+.page .content .dash .dash-12 .twitter {
+    background-color: rgb(29 161 242 / 20%);
+}
+.page .content .dash .dash-12 .twitter .info i {
+    color: white;
+    background-color: #1da1f2;
+}
+.page .content .dash .dash-12 .twitter .info .txt {
+    color: #1da1f2;
+}
+.page .content .dash .dash-12 .twitter .click a {
+    background-color: #1da1f2;
+}
+
+.page .content .dash .dash-12 .facebook {
+    background-color: rgb(24 119 242 / 20%);
+}
+.page .content .dash .dash-12 .facebook .info i {
+    color: white;
+    background-color: #1877f2;
+}
+.page .content .dash .dash-12 .facebook .info .txt {
+    color: #1877f2;
+}
+.page .content .dash .dash-12 .facebook .click a {
+    background-color: #1877f2;
+}
+
+.page .content .dash .dash-12 .youtube {
+    background-color: rgb(255 0 0 / 20%);
+}
+.page .content .dash .dash-12 .youtube .info i {
+    color: white;
+    background-color: #ff0000;
+}
+.page .content .dash .dash-12 .youtube .info .txt {
+    color: #ff0000;
+}
+.page .content .dash .dash-12 .youtube .click a {
+    background-color: #ff0000;
+}
+
+.page .content .dash .dash-12 .linkidin {
+    background-color: rgb(0 119 181 / 20%);
+}
+.page .content .dash .dash-12 .linkidin .info i {
+    color: white;
+    background-color: #0077b5;
+}
+.page .content .dash .dash-12 .linkidin .info .txt {
+    color: #0077b5;
+}
+.page .content .dash .dash-12 .linkidin .click a {
+    background-color: #0077b5;
+}
+
+.page .content .dash-13 {
+    padding: 20px;
+}
+
+.page .content .dash-13 .box-title h2 {
+    margin-bottom: 20px;
+}
+
+.page .content .dash-13 .table {
+    overflow-x: auto;
+}
+
+.page .content .dash-13 .table table {
+    border-spacing: 0;
+    border-right: 1px solid #eee;
+    min-width: 1000px;
+    width: 100%;
+}
+
+.page .content .dash-13 table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+.page .content .dash-13 table thead td {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.page .content .dash-13 table tbody td {
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.page .content .dash-13 table tbody tr:hover td {
+    background-color: #f9f9f9;
+}
+
+.page .content .dash-13 table tbody td img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.page .content .dash-13 table tbody td img:not(:first-of-type) {
+    margin-left: -20px;
+}
+
+.page .content .dash-13 table tbody tr td:last-of-type span {
+    color: white;
+    padding: 4px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.page .content .dash-13 table tbody tr:first-of-type td:last-of-type span {
+    background-color: var(--orange-color);
+}
+.page .content .dash-13 table tbody tr:nth-of-type(2) td:last-of-type span {
+    background-color: var(--blue-color);
+}
+.page .content .dash-13 table tbody tr:nth-of-type(3) td:last-of-type span,
+.page .content .dash-13 table tbody tr:nth-of-type(4) td:last-of-type span,
+.page .content .dash-13 table tbody tr:nth-of-type(6) td:last-of-type span {
+    background-color: var(--green-color);
+}
+.page .content .dash-13 table tbody tr:nth-of-type(5) td:last-of-type span {
+    background-color: var(--red-color);
+} 
+
+/* End Dashboard Content */

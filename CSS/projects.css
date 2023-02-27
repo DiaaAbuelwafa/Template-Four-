@@ -1,0 +1,167 @@
+/* Start Global Rules */
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+/* End Main Components */
+
+/* Start Projects Content */
+.page .content .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+@media(max-width: 1199px) {
+    .page .content .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+.page .content .projects .box-details {
+    padding: 20px;
+    position: relative;
+}
+
+.page .content .projects .box-details::before {
+    content: "15/6/2022";
+    font-size: 13px;
+    text-align: end;
+    color: var(--grey-color);
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+.page .content .projects .box-details .txt {
+    margin-bottom: 50px;
+}
+
+.page .content .projects .box-details .txt p:first-of-type {
+    font-size: 15px;
+}
+
+.page .content .projects .box-details .txt p:last-of-type {
+    font-size: 14px;
+    color: var(--grey-color);
+    margin-top: 15px;
+}
+
+.page .content .projects .box-details .images {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.page .content .projects .box-details .images img {
+    border: 2px solid white;
+    width: 40px;
+    max-width: 100%;
+    border-radius: 50px;
+    z-index: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.page .content .projects .box-details .images img:not(:first-of-type) {
+    margin-left: -15px;
+}
+
+.page .content .projects .box-details .images img:hover {
+    z-index: 2;
+}
+
+.page .content .projects .box-details .skills {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.page .content .projects .box-details .skills span {
+    display: block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background-color: #eee;
+    font-size: 13px;
+    margin-left: 5px;
+    width: fit-content;
+}
+
+@media (max-width: 767px) {
+    .page .content .projects .box-details .skills {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .page .content .projects .box-details .skills span {
+        margin-bottom: 10px;
+    }
+}
+
+.page .content .projects .box-details .range {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page .content .projects .box-details .range span {
+    display: block;
+}
+
+.page .content .projects .box-details .range > span:first-of-type {
+    width: 260px;
+    height: 8px;
+    border-radius: 6px;
+    background-color: #eee;
+}
+
+@media (max-width: 767px) {
+    .page .content .projects .box-details .range {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .page .content .projects .box-details .range > span:first-of-type {
+        margin-bottom: 10px;
+    }
+}
+.page .content .projects .box-details .range > span:first-of-type span {
+    height: 8px;
+    border-radius: 6px;
+    background-color: var(--blue-color);
+}
+
+.page .content .projects .box-details:nth-of-type(2) .range > span:first-of-type span,
+.page .content .projects .box-details:nth-of-type(4) .range > span:first-of-type span,
+.page .content .projects .box-details:nth-of-type(5) .range > span:first-of-type span,
+.page .content .projects .box-details:nth-of-type(7) .range > span:first-of-type span,
+.page .content .projects .box-details:nth-of-type(8) .range > span:first-of-type span,
+.page .content .projects .box-details:nth-of-type(9) .range > span:first-of-type span {
+    background-color: var(--green-color);
+}
+
+.page .content .projects .box-details:nth-of-type(1) .range > span:first-of-type span,
+.page .content .projects .box-details:nth-of-type(6) .range > span:first-of-type span {
+    background-color: var(--red-color);
+}
+
+.page .content .projects .box-details .range > span:last-of-type {
+    color: var(--grey-color);
+    position: relative;
+    font-size: 14px;
+}
+
+.page .content .projects .box-details .range > span:last-of-type::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\24";
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+
+/* End Projects Content */

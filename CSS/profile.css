@@ -1,0 +1,264 @@
+/* Start Global Rules */
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+/* End Main Components */
+
+/* Start Profile Content */
+
+.page .content .profile .profile-1 {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .page .content .profile .profile-1 {
+        flex-direction: column;
+    }
+}
+
+.page .content .profile .profile-1 .personal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page .content .profile .profile-1 .personal > div {
+    border-right: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    min-width: 220px;
+}
+
+@media (max-width: 767px) {
+    .page .content .profile .profile-1 .personal > div {
+        width: 100%;
+        margin-bottom: 20px;
+        border: none;
+    }
+}
+
+.page .content .profile .profile-1 .personal img {
+    width: 120px;
+    max-width: 100%;
+}
+
+.page .content .profile .profile-1 .personal h3 {
+    margin: 10px 0;
+}
+
+.page .content .profile .profile-1 .personal span {
+    color: var(--grey-color);
+}
+
+.page .content .profile .profile-1 .personal span:nth-of-type(2) {
+    width: 120px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #eee;
+    display: block;
+    position: relative;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page .content .profile .profile-1 .personal span:nth-of-type(2)::before {
+    content: "";
+    width: 70%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: var(--blue-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page .content .profile .profile-1 .personal .icon i {
+    color: var(--orange-color);
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.page .content .profile .profile-1 .personal span:last-of-type {
+    font-size: 13px;
+}
+
+.page .content .profile .profile-1 ul {
+    flex: 1;
+}
+
+.page .content .profile .profile-1 ul li {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.page .content .profile .profile-1 ul li:hover {
+    background-color: #f9f9f9;
+}
+
+.page .content .profile .profile-1 ul li .discription,
+.page .content .profile .profile-1 ul li .gender,
+.page .content .profile .profile-1 ul li .country,
+.page .content .profile .profile-1 ul li .check {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.page .content .profile .profile-1 ul li:nth-of-type(2),
+.page .content .profile .profile-1 ul li:nth-of-type(3) {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+
+.page .content .profile .profile-1 ul li .discription p:first-of-type {
+    margin-bottom: 10px;
+}
+
+.page .content .profile .profile-1 ul li  p:first-of-type {
+    font-size: 15px;
+    color: var(--grey-color);
+}
+
+.page .content .profile .profile-1 ul li  p {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.page .content .profile .profile-1 ul li p span {
+    color: black;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.page .content .profile .profile-1 ul li .check div {
+    height: 20px;
+}
+
+.page .content .profile .profile-1 ul li .check div::before {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+}
+
+.page .content .profile .skills {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .page .content .profile .skills {
+        flex-direction: column;
+    }
+}
+
+.page .content .profile .profile-2 {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.page .content .profile .profile-2 .box-title {
+    margin-bottom: 20px;
+}
+
+.page .content .profile .profile-2 .box-details div {
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+    .page .content .profile .profile-2 .box-details div {
+        justify-content: center;
+    }
+}
+
+.page .content .profile .profile-2 .box-details div:last-of-type {
+    border: none;
+}
+
+.page .content .profile .profile-2 .box-details div span {
+    display: block;
+    padding: 4px 10px;
+    background-color: #eee;
+    border-radius: 6px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.page .content .profile .profile-3 {
+    padding: 20px;
+    flex-grow: 2;
+}
+
+.page .content .profile .profile-3 .box-title {
+    margin-bottom: 20px;
+}
+
+.page .content .profile .profile-3 .box-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.page .content .profile .profile-3 .box-details:last-of-type {
+    border: none;
+}
+
+.page .content .profile .profile-3 .box-details .info {
+    display: flex;
+    align-items: center;
+}
+
+.page .content .profile .profile-3 .box-details .info .txt span {
+    display: block;
+}
+
+.page .content .profile .profile-3 .box-details .info .txt span:last-of-type {
+    color: var(--grey-color);
+    margin-top: 10px;
+}
+
+.page .content .profile .profile-3 .box-details img {
+    width: 64px;
+    max-width: 100%;
+    margin-right: 10px;
+}
+
+.page .content .profile .profile-3 .box-details .time span {
+    display: block;
+}
+
+.page .content .profile .profile-3 .box-details .time span:last-of-type {
+    color: var(--grey-color);
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .page .content .profile .profile-3 .box-details,
+    .page .content .profile .profile-3 .box-details .info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .page .content .profile .profile-3 .box-details img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .page .content .profile .profile-3 .box-details .time span:first-of-type {
+        margin: 10px 0;
+    }
+}
+
+/* End Profile Content */
